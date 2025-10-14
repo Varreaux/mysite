@@ -1,6 +1,6 @@
 # mysite
 
-[![Build Status](https://travis-ci.org/Varreaux/mysite.svg?branch=main)](https://travis-ci.org/Varreaux/mysite)
+[![Build Status](https://travis-ci.com/Varreaux/mysite.svg?branch=main)](https://travis-ci.com/Varreaux/mysite)
 [![Coverage Status](https://coveralls.io/repos/github/Varreaux/mysite/badge.svg?branch=main)](https://coveralls.io/github/Varreaux/mysite?branch=main)
 
 A Django polls application with continuous integration and deployment.
