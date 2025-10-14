@@ -8,13 +8,11 @@ install:
 
 # Run tests and code quality checks
 script:
-  # Run Django tests
-  - python manage.py test
   # Check code formatting with black
   - black --check .
   # Run flake8 linting
   - flake8 .
-  # Run coverage tests
+  # Run tests with coverage
   - coverage run --source='.' manage.py test
   - coverage report
   # Submit coverage to coveralls
