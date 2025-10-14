@@ -42,6 +42,4 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         # Redirect to the results page for the question
-        return HttpResponseRedirect(
-            reverse("polls:results", args=(question.id,))
-        )
+        return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
