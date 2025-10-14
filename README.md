@@ -1,7 +1,9 @@
 # mysite
 
 [![Build Status](https://travis-ci.com/Varreaux/mysite.svg?branch=main)](https://travis-ci.com/Varreaux/mysite)
-[![Coverage Status](https://coveralls.io/repos/github/Varreaux/mysite/badge.svg?branch=main)](https://coveralls.io/github/Varreaux/mysite?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/Varreaux/mysite/badge.svg?branch=main)](https://coveralls.io/github/Varreaux/mysite)
+
+<!-- Badges will appear once the services are set up -->
 
 A Django polls application with continuous integration and deployment.
 
