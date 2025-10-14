@@ -17,8 +17,8 @@ script:
   # Run coverage tests
   - coverage run --source='.' manage.py test
   - coverage report
-  # Submit coverage to coveralls (optional - won't fail build)
-  - coveralls || true
+  # Submit coverage to coveralls
+  - coveralls
 
 # Deploy to AWS Elastic Beanstalk on success
 deploy:
