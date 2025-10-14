@@ -20,13 +20,13 @@ after_success:
   - coveralls
 
 # Deploy to AWS Elastic Beanstalk on success
-deploy:
-  provider: elasticbeanstalk
-  region: us-east-1
-  app: mysite
-  env: mysite-env
-  bucket_name: elasticbeanstalk-us-east-1-123456789012
-  on:
-    branch: main
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+# deploy:
+#   provider: elasticbeanstalk
+#   region: us-east-1
+#   app: mysite
+#   env: mysite-env
+#   bucket_name: elasticbeanstalk-us-east-1-123456789012
+#   on:
+#     branch: main
+#   access_key_id: $AWS_ACCESS_KEY_ID
+#   secret_access_key: $AWS_SECRET_ACCESS_KEY
