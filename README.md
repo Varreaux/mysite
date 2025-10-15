@@ -1,7 +1,7 @@
 # mysite
 
 [![Build Status](https://app.travis-ci.com/Varreaux/mysite.svg?branch=master)](https://app.travis-ci.com/github/Varreaux/mysite)
-[![Coverage Status](https://coveralls.io/repos/github/Varreaux/mysite/badge.svg?branch=main)](https://coveralls.io/github/Varreaux/mysite?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/Varreaux/mysite/badge.svg?branch=main)](https://coveralls.io/github/Varreaux/mysite?branch=main)  
 
 <!-- Badges will appear once the services are set up -->
 

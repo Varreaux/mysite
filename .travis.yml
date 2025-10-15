@@ -2,6 +2,11 @@ language: python
 python:
   - "3.11"
 
+branches:
+  only:
+    - main
+    - master
+    
 # Install dependencies
 install:
   - pip install -r requirements.txt
