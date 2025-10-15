@@ -20,7 +20,26 @@ from django.urls import include, path
 
 
 def home(request):
-    return HttpResponse("Hello from the home page!")
+    return HttpResponse(
+        """
+        <html>
+        <head><title>My Django Site</title></head>
+        <body>
+            <h1>Hello from the home page!</h1>
+            <p>Welcome to my Django polls application.</p>
+            <a href="/polls/" style="
+                display: inline-block;
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+            ">Go to Polls</a>
+        </body>
+        </html>
+        """
+    )
 
 
 urlpatterns = [
