@@ -2,9 +2,15 @@ language: python
 python:
   - "3.11"
 
+branches:
+  only:
+    - main
+    - master
+    
 # Install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install black==23.12.1 flake8 coverage coveralls
 
 # Run tests and code quality checks
 script:
@@ -21,13 +27,18 @@ after_success:
   - coveralls
 
 # Deploy to AWS Elastic Beanstalk on success
-# deploy:
-#   provider: elasticbeanstalk
-#   region: us-east-1
-#   app: mysite
-#   env: mysite-env
-#   bucket_name: elasticbeanstalk-us-east-1-123456789012
-#   on:
-#     branch: master
-#   access_key_id: $AWS_ACCESS_KEY_ID
-#   secret_access_key: $AWS_SECRET_ACCESS_KEY
+before_deploy:
+  - echo "Checking AWS credentials..."
+  - aws s3 ls s3://elasticbeanstalk-us-east-1-257394471030 --region us-east-1
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "mysite"
+  env: "mysite-env"
+  bucket: "elasticbeanstalk-us-east-1-257394471030"
+  on:
+    branch: main
+  skip_cleanup: true
+
+
