@@ -21,3 +21,13 @@ class QuestionModelTests(TestCase):
         time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_question = Question(pub_date=time)
         self.assertIs(recent_question.was_published_recently(), True)
+
+    def test_question_creation(self):
+        """Test that we can create a Question with text and pub_date."""
+        question_text = "What is your favorite color?"
+        pub_date = timezone.now()
+        question = Question(question_text=question_text, pub_date=pub_date)
+        
+        self.assertEqual(question.question_text, question_text)
+        self.assertEqual(question.pub_date, pub_date)
+        self.assertEqual(str(question), question_text)
