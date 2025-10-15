@@ -27,7 +27,7 @@ class QuestionModelTests(TestCase):
         question_text = "What is your favorite color?"
         pub_date = timezone.now()
         question = Question(question_text=question_text, pub_date=pub_date)
-        
+
         self.assertEqual(question.question_text, question_text)
         self.assertEqual(question.pub_date, pub_date)
         self.assertEqual(str(question), question_text)
